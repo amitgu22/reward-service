@@ -2,7 +2,7 @@
 
 Spring boot application to demonstrate the real time reward system. 
 
-Followed data driven testing apporach for a building a system.It does allows you to undertsand the system and all edge cases.
+Followed data driven testing apporach for a building a system.It does allows you to undertsand the system functional floe and all the edge cases.
 
 ## Requirements
 
