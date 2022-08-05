@@ -42,11 +42,12 @@ API documentation available for below functionality
 
 http://localhost:8081/swagger-ui/index.html#/
 
-       -> Registering a new cusotmer 
+       -> Registering a new customer 
        -> Adding a transactions
        -> Linking a transaction to the customer
        -> All available loyalty poits based on the pre connditions per customer
        -> All pending loyalty points per customer
+       -> convert points to the amount for redemption
 
 
 
