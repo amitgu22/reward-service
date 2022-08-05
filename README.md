@@ -28,7 +28,7 @@ New pending points become available points for use at the end of every week if:
 
 ## Desing and development features includes
        Domain design
-       DTO paatern
+       DTO patern
        JPA repository for CRUD operations
        Open API documentations.
        Java 8 strems API
