@@ -32,8 +32,12 @@ New pending points become available points for use at the end of every week if:
        JPA repository for CRUD operations
        Open API documentations.
        Java 8 strems API
- 
+       
+## Service has test data available for demonstration 
 
+       http://localhost:8081/customers/available/1
+
+       http://localhost:8081/customers/pending/2
 
 ## API documentation available for below functionality
 
