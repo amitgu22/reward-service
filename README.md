@@ -32,12 +32,6 @@ New pending points become available points for use at the end of every week if:
        Open API documentations.
        Java 8 strems API
  
-## Service data available for initial testing
-
-http://localhost:8081/customers/available/1 -- will gove you a all valid loyalty points
-
-http://localhost:8081/customers/pending/2 -- will give you all pending loaylty points
-
 
 
 ## API documentation available for below functionality
