@@ -56,14 +56,14 @@ public class CustomerController {
     }
 
     @PostMapping(value = "{CustomerId}/transactions/{transactionId}/add")
-    public ResponseEntity<CustomerTransactionDto> addItemToCustomer(@PathVariable final Long CustomerId,
+    public ResponseEntity<CustomerTransactionDto> addTransactionToCustomer(@PathVariable final Long CustomerId,
                                                      @PathVariable final Long transactionId){
         Customer customer = customerService.addTransactionToCustomer(CustomerId, transactionId);
         return new ResponseEntity<>(CustomerTransactionDto.from(customer), HttpStatus.OK);
     }
 
     @DeleteMapping(value = "{CustomerId}/transactions/{transactionId}/remove")
-    public ResponseEntity<CustomerDto> removeItemFromCustomer(@PathVariable final Long CustomerId,
+    public ResponseEntity<CustomerDto> removeTransactionFromCustomer(@PathVariable final Long CustomerId,
                                                           @PathVariable final Long transactionId){
         Customer customer = customerService.removeTransactionFromCustomer(CustomerId, transactionId);
         return new ResponseEntity<>(CustomerDto.from(customer), HttpStatus.OK);
@@ -77,6 +77,12 @@ public class CustomerController {
 
     @GetMapping(value = "/pending/{id}")
     public ResponseEntity<CustomerTransactionDto> getAllPendingPoints(@PathVariable final Long id){
+        Customer customer = customerService.getCustomerAvailablePoints(id);
+        return new ResponseEntity<>(CustomerTransactionDto.from(customer), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/redeemPoints/{id}")
+    public ResponseEntity<CustomerTransactionDto> redeemPoints(@PathVariable final Long id,@PathVariable double amount){
         Customer customer = customerService.getCustomerAvailablePoints(id);
         return new ResponseEntity<>(CustomerTransactionDto.from(customer), HttpStatus.OK);
     }
