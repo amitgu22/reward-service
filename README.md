@@ -27,10 +27,10 @@ Examples:
 New pending points become available points for use at the end of every week if:
 
 ## Desing and devlopemtn features includes
-Domain design
-JPA repository for CRUD operations
-Open API documentations.
-Java 8 strems API
+       Domain design
+       JPA repository for CRUD operations
+       Open API documentations.
+       Java 8 strems API
  
 ## Service data available for initial testing
 
