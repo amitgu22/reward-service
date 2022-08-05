@@ -1,6 +1,6 @@
 # reward-service 
 
-Spring boot application to demonstrate the real time reward system. 
+Spring boot application to demonstrate the real time reward system for credit pr debit card users 
 
 Followed data driven testing apporach for a building a system.It does allows you to undertsand the system functional floe and all the edge cases.
 
