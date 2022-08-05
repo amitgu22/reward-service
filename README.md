@@ -9,19 +9,21 @@ Followed data driven testing apporach for a building a system.It does allows you
 1. How a customer can acquire new points:
 
 
-1 pending point for every euro until 5000 euro value of transaction
-2 pending points for every euro from 5001 euro to 7500 euro value of transaction
-3 pending points from 7501 euro value of transaction
+pending point for every euro until 5000 euro value of transaction
+pending points for every euro from 5001 euro to 7500 euro value of transaction
+pending points from 7501 euro value of transaction
+
 Examples:
 
-A.         A transaction of 4500 euro => 4500 points
+       A transaction of 4500 euro => 4500 points
 
 
-B.       A transaction of 7800 euro -> 10900 points
+       A transaction of 7800 euro -> 10900 points
 
 5000 points for first 5000 euro
 2*2500 points for 5001 -> 7500 euro
 3*300 points for 7501 -> 7800 euro 
+
 New pending points become available points for use at the end of every week if:
 
 The customer has spent at least 500 euro that week
