@@ -2,7 +2,10 @@
 
 Spring boot application to demonstrate the real time reward system for credit pr debit card users 
 
-Followed data driven testing apporach for a building a system.It does allows you to undertsand the system functional floe and all the edge cases.
+Followed data driven testing apporach for a building a system.It does allows you to undertsand the system functional floW and all the edge cases.
+Instead of writing test cases whihc just covered your method/unit changes.
+
+Integration test, validation and exception handling can be achived using DDT.
 
 ## Requirements
 
