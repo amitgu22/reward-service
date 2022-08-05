@@ -26,15 +26,7 @@ Examples:
 
 New pending points become available points for use at the end of every week if:
 
-The customer has spent at least 500 euro that week
-At least one transaction exists for that customer on every day of the week
-A user will lose all the points if no transaction was made in the last 5 weeks.
-
-2. How a customer can use the available points:
-
-User can use some or all available points. Every point is worth 1 eurocent.
-
-3. A customer should be able to query for balance of pending and available points and history of loyalty points allocation & usage   
+ 
 
 
 
