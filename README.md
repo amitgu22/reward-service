@@ -36,6 +36,40 @@ New pending points become available points for use at the end of every week if:
 ## Service has test data available for demonstration 
 
        http://localhost:8081/customers/available/1
+
+              {
+         "customerId": 1,
+         "customerName": "ALBERT",
+         "customerCity": "New York",
+         "transactions": [
+           {
+             "transactionDescription": "USA",
+             "transactionAmount": 100000,
+             "transactionDate": [
+               2022,
+               8,
+               1
+             ],
+             "loyaltyPoints": 287500,
+             "transactionId": 1,
+             "status": "AVAILABLE"
+           },
+           {
+             "transactionDescription": "USA",
+             "transactionAmount": 2222,
+             "transactionDate": [
+               2022,
+               8,
+               2
+             ],
+             "loyaltyPoints": 2222,
+             "transactionId": 3,
+             "status": "AVAILABLE"
+           },
+       .....
+         ],
+         "availableLoyaltyBonus": 113332
+       }
        
        
 
