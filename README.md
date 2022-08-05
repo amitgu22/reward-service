@@ -30,12 +30,12 @@ New pending points become available points for use at the end of every week if:
 
 
 
-API documentation available for below functionality
+## API documentation available for below functionality
 
 http://localhost:8081/swagger-ui/index.html#/
 
-       -> Registering a new customer 
-       -> Adding a transactions
+       -> Registering / Deleting / Modifying a new customer 
+       -> Adding / Deleting / Modifying / Retreiving a transactions
        -> Linking a transaction to the customer
        -> All available loyalty poits based on the pre connditions per customer
        -> All pending loyalty points per customer
