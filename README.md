@@ -40,42 +40,42 @@ New pending points become available points for use at the end of every week if:
        
 
        http://localhost:8081/customers/pending/2
-       
-       {
-  "customerId": 2,
-  "customerName": "GEORGE",
-  "customerCity": "Berlin",
-  "transactions": [
-    {
-      "transactionDescription": "USA",
-      "transactionAmount": 10,
-      "transactionDate": [
-        2022,
-        8,
-        1
-      ],
-      "loyaltyPoints": 10,
-      "transactionId": 2,
-      "status": "PENDING"
-    },
-    {
-      "transactionDescription": "USA",
-      "transactionAmount": 20,
-      "transactionDate": [
-        2022,
-        8,
-        2
-      ],
-      "loyaltyPoints": 20,
-      "transactionId": 9,
-      "status": "PENDING"
-    },
-    .
-    .
-    .
-  ],
-  "availableLoyaltyBonus": 150
-}
+
+              {
+         "customerId": 2,
+         "customerName": "GEORGE",
+         "customerCity": "Berlin",
+         "transactions": [
+           {
+             "transactionDescription": "USA",
+             "transactionAmount": 10,
+             "transactionDate": [
+               2022,
+               8,
+               1
+             ],
+             "loyaltyPoints": 10,
+             "transactionId": 2,
+             "status": "PENDING"
+           },
+           {
+             "transactionDescription": "USA",
+             "transactionAmount": 20,
+             "transactionDate": [
+               2022,
+               8,
+               2
+             ],
+             "loyaltyPoints": 20,
+             "transactionId": 9,
+             "status": "PENDING"
+           },
+           .
+           .
+           .
+         ],
+         "availableLoyaltyBonus": 150
+       }
 
 ## API documentation available for below functionality
 
