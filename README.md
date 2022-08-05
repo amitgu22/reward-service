@@ -40,9 +40,14 @@ User can use some or all available points. Every point is worth 1 eurocent.
 
 API documentation available for below functionality
 
-Registering a new cusotmer 
+http://localhost:8081/swagger-ui/index.html#/
 
-![image](https://user-images.githubusercontent.com/11241862/183064132-256d5235-e8de-4aae-8615-17b151ee9c75.png)
+-> Registering a new cusotmer 
+-> Adding a transactions
+-> Linking a transaction to the customer
+-> All available loyalty poits based on the pre connditions per customer
+-> All pending loyalty points per customer
+
 
 
 
