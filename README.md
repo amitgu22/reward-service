@@ -40,7 +40,7 @@ New pending points become available points for use at the end of every week if:
 
        Available loyalty points transactions 
        
-       --> http://localhost:8081/customers/available/1
+       --> http://localhost:8081/customers/eligiblePoints/1
 
                    {
          "customerId": 1,
@@ -79,9 +79,9 @@ New pending points become available points for use at the end of every week if:
        
 
        Pending loyalty points 
-       --> http://localhost:8081/customers/pending/2
+       --> http://localhost:8081/customers/ineligiblePoints/2
 
-              {
+                {
          "customerId": 2,
          "customerName": "GEORGE",
          "customerCity": "Berlin",
@@ -96,7 +96,7 @@ New pending points become available points for use at the end of every week if:
              ],
              "loyaltyPoints": 10,
              "transactionId": 2,
-             "status": "PENDING"
+             "status": "INELIGIBLE"
            },
            {
              "transactionDescription": "USA",
@@ -108,14 +108,14 @@ New pending points become available points for use at the end of every week if:
              ],
              "loyaltyPoints": 20,
              "transactionId": 9,
-             "status": "PENDING"
-           },
-           .
-           .
-           .
-         ],
-         "availableLoyaltyBonus": 150
-       }
+             "status": "INELIGIBLE"
+           },,
+                  .
+                  .
+                  .
+                ],
+                "availableLoyaltyBonus": 150
+              }
 
 ## API documentation available for below functionality
 
