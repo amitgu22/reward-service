@@ -5,7 +5,10 @@ import com.customer.benefits.loyalty.model.Transaction;
 import lombok.Builder;
 import lombok.Data;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -33,6 +36,7 @@ public class CustomerTransactionDto {
     public static CustomerTransactionDto fromRedemption(Customer customer,Double amount){
 
         CustomerTransactionDto customerTransactionDto = from(customer);
+        customerTransactionDto.setTransactions(Collections.emptyList());
         customerTransactionDto.setRedeemedLoyaltyBonus(amount);
         customerTransactionDto.setRemainingLoyaltyBonus(customerTransactionDto.getTotalEarnedLoyaltyBonus() -
                 customerTransactionDto.getRedeemedLoyaltyBonus());
