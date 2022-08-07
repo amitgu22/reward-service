@@ -38,7 +38,7 @@ New pending points become available points for use at the end of every week if:
        
 ## Service has test data available for demonstration 
 
-       Available loyalty points transactions 
+       Eligible loyalty points transactions 
        
        --> http://localhost:8081/customers/eligiblePoints/1
 
@@ -78,7 +78,7 @@ New pending points become available points for use at the end of every week if:
        
        
 
-       Pending loyalty points 
+       Ineligible loyalty points 
        --> http://localhost:8081/customers/ineligiblePoints/2
 
                 {
