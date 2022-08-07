@@ -69,21 +69,27 @@ public class CustomerController {
         return new ResponseEntity<>(CustomerDto.from(customer), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/available/{id}")
+    @GetMapping(value = "/eligiblePoints/{id}")
     public ResponseEntity<CustomerTransactionDto> getAllAvailablePoints(@PathVariable final Long id){
         Customer customer = customerService.getCustomerAvailablePoints(id);
         return new ResponseEntity<>(CustomerTransactionDto.from(customer), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/pending/{id}")
-    public ResponseEntity<CustomerTransactionDto> getAllPendingPoints(@PathVariable final Long id){
+    @GetMapping(value = "/ineligiblePoints/{id}")
+    public ResponseEntity<CustomerTransactionDto> getAllIneligiblePoints(@PathVariable final Long id){
         Customer customer = customerService.getCustomerAvailablePoints(id);
         return new ResponseEntity<>(CustomerTransactionDto.from(customer), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/redeemPoints/{id}")
-    public ResponseEntity<CustomerTransactionDto> redeemPoints(@PathVariable final Long id,@PathVariable double amount){
+    @GetMapping(value = "/lapsedPoints/{id}")
+    public ResponseEntity<CustomerTransactionDto> getAllLapsedPoints(@PathVariable final Long id){
         Customer customer = customerService.getCustomerAvailablePoints(id);
         return new ResponseEntity<>(CustomerTransactionDto.from(customer), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/redeemPoints/{id}/{amount}/{description}")
+    public ResponseEntity<CustomerTransactionDto> redeemPoints(@PathVariable final Long id,@PathVariable final Double amount,@PathVariable final String description){
+        CustomerTransactionDto customerTransactionDto = customerService.redemption(id,amount);
+        return new ResponseEntity<>(customerTransactionDto, HttpStatus.OK);
     }
 }

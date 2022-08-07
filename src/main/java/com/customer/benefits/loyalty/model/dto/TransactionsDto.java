@@ -18,6 +18,8 @@ public class TransactionsDto {
     @ApiModelProperty(hidden = true)
     private Double loyaltyPoints;
 
+
+
     @ApiModelProperty(hidden = true)
     private Long transactionId;
 

@@ -8,6 +8,8 @@ class LoyaltyServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
+
+
 	}
 
 }

@@ -23,6 +23,7 @@ public class Transaction implements Serializable {
     private String transactionDescription;
     private Double transactionAmount;
     private Double loyaltyPoints;
+
     //@Temporal(TemporalType.TIMESTAMP)
     private LocalDate transactionDate;
     @ManyToOne
@@ -37,7 +38,6 @@ public class Transaction implements Serializable {
                 .transactionDate(transactionsDto.getTransactionDate())
                 .transactionDescription(transactionsDto.getTransactionDescription())
                 .loyaltyPoints(populateLoyaltyPoints(transactionsDto)).
-
                 build();
 
 

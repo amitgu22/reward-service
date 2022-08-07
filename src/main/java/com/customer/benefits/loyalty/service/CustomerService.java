@@ -2,7 +2,9 @@ package com.customer.benefits.loyalty.service;
 
 import com.customer.benefits.loyalty.model.Customer;
 import com.customer.benefits.loyalty.model.Transaction;
+import com.customer.benefits.loyalty.model.dto.CustomerTransactionDto;
 import com.customer.benefits.loyalty.model.exception.CustomerNotFoundException;
+import com.customer.benefits.loyalty.model.exception.RedemptionNotAllowedException;
 import com.customer.benefits.loyalty.model.exception.TransactionsAlreadyAssignedException;
 import com.customer.benefits.loyalty.repository.CustomerRepository;
 import com.customer.benefits.loyalty.util.STATUS;
@@ -22,6 +24,8 @@ public class CustomerService {
 
     private final CustomerRepository customerRepository;
     private final TransactionService transactionService;
+
+    private Double totalPoints;
 
     /* TO-DO
         looking for configuration value but throwing number-format exception
@@ -54,13 +58,32 @@ public class CustomerService {
     public Customer getCustomerAvailablePoints(Long id){
         Optional<Customer> customer =  customerRepository.findById(id);
         if(customer.isPresent() && isValidWeeklyTransactions(customer.get().getTransactions())) {
-            customer.get().getTransactions().stream().forEach(transaction -> transaction.setStatus(STATUS.AVAILABLE.name()));
+            customer.get().getTransactions().forEach(transaction -> transaction.setStatus(STATUS.ELIGIBLE.name()));
             return customer.orElse(new Customer());
         }else{
-
+            customer.get().getTransactions().forEach(transaction -> transaction.setStatus(STATUS.INELIGIBLE.name()));
             return customer.orElse(new Customer());
         }
     }
+
+    public CustomerTransactionDto redemption(Long id , Double amount){
+
+        Customer customer = getCustomerAvailablePoints(id);
+
+        if(totalPoints > amount){
+            return CustomerTransactionDto.fromRedemption(customer,amount);
+        }else{
+            throw new RedemptionNotAllowedException("Not enough loyalty points available for redemption");
+        }
+
+
+
+    }
+
+
+
+
+
 
     public boolean isValidWeeklyTransactions(List<Transaction> transactions){
 
@@ -76,9 +99,9 @@ public class CustomerService {
     */
 
         List<DayOfWeek> dayOfWeeks = transactions.parallelStream().map(transaction -> transaction.getTransactionDate().getDayOfWeek()).collect(Collectors.toList());
-        double sumAmount = transactions.stream().mapToDouble(Transaction::getTransactionAmount).sum();
+        totalPoints = transactions.stream().mapToDouble(Transaction::getTransactionAmount).sum();
 
-        return dayOfWeeks.size() == 7 && sumAmount > threesHoldAmt;
+        return dayOfWeeks.size() == 7 && totalPoints > threesHoldAmt;
     }
 
 
