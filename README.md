@@ -42,7 +42,7 @@ New pending points become available points for use at the end of every week if:
        
        --> http://localhost:8081/customers/available/1
 
-              {
+                   {
          "customerId": 1,
          "customerName": "ALBERT",
          "customerCity": "New York",
@@ -57,7 +57,7 @@ New pending points become available points for use at the end of every week if:
              ],
              "loyaltyPoints": 287500,
              "transactionId": 1,
-             "status": "AVAILABLE"
+             "status": "ELIGIBLE"
            },
            {
              "transactionDescription": "USA",
@@ -69,12 +69,12 @@ New pending points become available points for use at the end of every week if:
              ],
              "loyaltyPoints": 2222,
              "transactionId": 3,
-             "status": "AVAILABLE"
+             "status": "ELIGIBLE"
            },
-       .....
-         ],
-         "availableLoyaltyBonus": 113332
-       }
+              .....
+                ],
+                "availableLoyaltyBonus": 113332
+              }
        
        
 
