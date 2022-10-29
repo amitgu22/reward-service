@@ -34,7 +34,7 @@ New pending points become available points for use at the end of every week if:
        DTO patern
        JPA repository for CRUD operations
        Open API documentations.
-       Java 8 strems API
+       Java 8 streams API
        
 ## Service has test data available for demonstration 
 
